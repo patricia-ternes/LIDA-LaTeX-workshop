@@ -44,3 +44,13 @@
 ## Learning curve
 
 ![learning](inputs/figures/fig1.png)
+
+## What I can do with LaTeX?
+
+* [Book](https://www.overleaf.com/latex/templates/tagged/book)
+* [Figures, diagrams and plots](https://texample.net/tikz/examples/)
+* [Homework Assignment](https://www.overleaf.com/latex/templates/tagged/homework)
+* [Paper](https://www.overleaf.com/latex/templates/tagged/academic-journal)
+* [Poster](https://www.overleaf.com/latex/templates/tagged/poster)
+* [Presentation](https://www.overleaf.com/latex/templates/tagged/presentation)
+* [Thesis](https://www.overleaf.com/latex/templates/tagged/thesis)
