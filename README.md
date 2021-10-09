@@ -164,5 +164,50 @@ The standard classes provide four storing commands that are used to automaticall
 * **\thanks**: footnote
 * **\date**
 
+> Line 12: `maketitle`
+
+The title is created inside the text area through the command `maketitle`
+
 ### Text
+
+```latex
+\begin{document}
+   … your text goes here …
+\end{document}
+```
+
+#### Sectioning commands
+
+The commands for inserting sections are fairly intuitive. Of course, certain commands are appropriate to different document classes. For example, a book has chapters but an article doesn't (from [here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands)). Some examples:
+
+* `\chapter{chapter name}`: only books and reports
+* `\section{section name}`: not in letters
+* `\subsection{subsection name}`: not in letters
+* `\subsubsection{subsubsection name}`: not in letters
+* `\paragraph{paragraph content}`: not in letters
+
+The `\appendix` macro can be used to indicate that following sections or chapters are to be numbered as appendices. For example:
+
+```latex
+\section{first section}
+    ... some text ...
+
+\section{second section}
+    ... some text ...
+
+\appendix
+\section{first appendix}
+    ... some text ...
+
+\section{second appendix}
+    ... some text ...
+```
+
+#### Table of contents
+
+All auto-numbered headings get entered in the Table of Contents (also for list and figures) automatically. If you want to display the tables of content, just add the command.
+
+* `\listoffigures`
+* `\listoftables`
+* `\tableofcontents`
 
