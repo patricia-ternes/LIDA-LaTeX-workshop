@@ -22,13 +22,15 @@
   * Research Fellow, School of Geography, University of Leeds, UK
   * [More information](https://patricia-ternes.github.io/)
 
-## What is LaTeX
+## Introduction
+
+### What is LaTeX
 
 *"LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or «Bertolt Brecht»), is a document preparation system for high-quality typesetting."* 
 
 [Definition from here](https://www.latex-project.org/)
 
-## LaTeX features
+### LaTeX features
 
 * Typesetting journal articles, technical reports, books, and slide presentations.
 * Control over large documents containing sectioning, cross-references, tables and figures.
@@ -41,11 +43,11 @@
 
 [Definition from here](https://www.latex-project.org/)
 
-## Learning curve
+### Learning curve
 
 ![learning](inputs/figures/fig1.png)
 
-## What I can do with LaTeX?
+### What I can do with LaTeX?
 
 * [Book](https://www.overleaf.com/latex/templates/tagged/book)
 * [Figures, diagrams and plots](https://texample.net/tikz/examples/)
@@ -54,3 +56,17 @@
 * [Poster](https://www.overleaf.com/latex/templates/tagged/poster)
 * [Presentation](https://www.overleaf.com/latex/templates/tagged/presentation)
 * [Thesis](https://www.overleaf.com/latex/templates/tagged/thesis)
+
+## Overleaf
+
+[Overleaf](www.overleaf.com/) is a collaborative online LaTeX editor
+
+![overleaf overview](inputs/figures/fig2.png)
+
+### First project
+
+After creating an account, a page with the option `Create First Project` will appear (see image bellow). 
+
+![first project](inputs/figures/fig3.png)
+
+To create your first `Project` just click on the button, chose one template (here, the `Blank Project`) and give a name for your project.
