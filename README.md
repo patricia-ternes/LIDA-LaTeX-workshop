@@ -126,3 +126,11 @@ The generic document classes that come with LaTeX offer some layout flexibility,
 
 [See more about document classes options here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
 
+#### Standard titles
+
+The standard classes provide four storing commands that are used to automatically create the title. The storing commands are
+
+* **\title**
+* **\author**
+* **\thanks**: footnote
+* **\date**
