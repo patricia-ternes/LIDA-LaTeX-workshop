@@ -132,7 +132,7 @@ The most common options for the generic document classes are:
 
 #### Packages
 
-> Line 2: \usepackage[utf8]{inputenc} 
+> Line 2: `\usepackage[utf8]{inputenc}` 
 
 While writing your document, you will probably find that there are some areas where basic LaTeX cannot solve your problem. If you want to include graphics, colored text or source code from a file into your document, you need to enhance the capabilities of LaTeX. Such enhancements are called packages (from [here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Packages)). The `usepackage` command tells LaTeX to load packages of environments, commands, and symbols for specific purposes (from [here](https://latex.wikia.org/wiki/Usepackage_(LaTeX_command))).  The general syntax is
 
@@ -151,11 +151,11 @@ The most common packages are:
 
 #### Standard titles
 
-> Line 4: \title{ }
+> Line 4: `\title{ }`
 
-> Line 5: \author{ }
+> Line 5: `\author{ }`
 
-> Line 6: \date{October 2021}
+> Line 6: `\date{ }`
 
 The standard classes provide four storing commands that are used to automatically create the title. The storing commands are
 
