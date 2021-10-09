@@ -15,3 +15,10 @@
     <h1 align="center">Intro to LaTeX Workshop</h1>
     <h2 align="center">Leeds Institute for Data Analytics (LIDA)</h2>
 </p>
+
+## Author
+
+* Dr Patricia Ternes
+  * Research Fellow, School of Geography, University of Leeds, UK
+  * [More information](https://patricia-ternes.github.io/)
+
