@@ -247,7 +247,7 @@ Note that the `[description]` is optional.
 \end{enumerate}
 ```
 
-#### Figure
+#### Figures
 
 To include images in your text you need include a package in the `preamble`. I recommend using the package `graphicx`.
 
@@ -268,20 +268,51 @@ The image is inserted using the command `\includegraphics`. The ideal is to use 
 
 Some figures options are (from [here](https://pt.overleaf.com/learn/latex/Inserting_Images#Changing_the_image_size_and_rotating_the_picture)):
 
-* **scale**
-* **width** 
-* **height**
-* **angle** 
+* `scale`
+* `width`
+* `height`
+* `angle`
+
+Some size units are (see all [here](https://pt.overleaf.com/learn/latex/Inserting_Images#Reference_guide)):
+
+* `pt`
+* `mm`
+* `cm`
+* `\linewidth`
+* `\textheight`
+
 
 Figures are [floats](https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions) (containers for things in a document that cannot be broken over a page) and the LaTeX will  automatically define the best location for the image. However, if we don't give some "tips" on how to do this, the end result can be very different from what you expect. Fortunately, we can add some options to help LaTeX define the best position for the image.
 
 Some position options are (from [here](https://pt.overleaf.com/learn/latex/Inserting_Images#Positioning)):
 
-* **h**: Place the float here, i.e., approximately at the same point it occurs in the source text (however, notexactly at the spot)
-* **t**: Position at the top of the page.
-* **b**: Position at the bottom of the page.
-* **p**: Put on a special page for floats only.
-* **!**: Override internal parameters LaTeX uses for determining "good" float positions.
-* **H**: Places the float at precisely the location in the LATEX code. Requires the float package, though may cause problems occasionally. This is somewhat equivalent to h!.
+* `h`: Place the float here, i.e., approximately at the same point it occurs in the source text (however, notexactly at the spot)
+* `t`: Position at the top of the page.
+* `b`: Position at the bottom of the page.
+* `p`: Put on a special page for floats only.
+* `!`: Override internal parameters LaTeX uses for determining "good" float positions.
+* `H`: Places the float at precisely the location in the LaTeX code. Requires the float package, though may cause problems occasionally. This is somewhat equivalent to h!.
 
-#### Tables 
+#### Tables
+
+The `tabular` environment is the default LaTeX method to create tables. As for including figures, the ideal is to use the `table` environment to to properly include the table in the text. The complete command is
+
+```latex
+\begin{table}[position option]
+    \centering
+    \begin{tabular}{c|c}
+       line 1 column 1  &  text: line 1 column 2\\
+       line 2 column 1  &  text: line 2 column 2
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+```
+
+The number of columns and the alignment is defined as a parameter just after the `tabular`, here was `{c | c}`,  meaning two centralized columns with one vertical line (you can define more - or none - vertical lines). The number of columns is related with the number of letters, and The column alignment is defined by letters:
+
+* `l`: left
+* `c`: centre
+* `r`: right
+
+To create a new line just add the `\\` command to the end of the previous line and write a new line. To drawn a horizontal line, use the `\hline` command after the `\\`.
