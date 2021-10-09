@@ -106,7 +106,13 @@ The general syntax of a LaTeX document is
 
 > Line 1: `\documentclass{article}`
 
-The `documentclass` is the first command of a LaTeX document, and identifies the type of document contained in the input file (from [here](https://latex.wikia.org/wiki/List_of_LaTeX_commands#documentclass_command)). Some standard classes are:
+The `documentclass` is the first command of a LaTeX document, and identifies the type of document contained in the input file (from [here](https://latex.wikia.org/wiki/List_of_LaTeX_commands#documentclass_command)). The general syntax is
+
+```latex
+\documentclass[options]{class}
+```
+
+Some standard classes are:
 
 * **article**: For articles in scientific journals, presentations, short reports, program documentation, invitations, ...
 * **report**: For longer reports containing several chapters, small books, thesis, ...
@@ -116,9 +122,7 @@ The `documentclass` is the first command of a LaTeX document, and identifies the
 
 [See more about document classes here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
 
-##### Document Class Options
-
-The generic document classes that come with LaTeX offer some layout flexibility, which is why they have a lot of options in common. The most common options for the generic document classes are:
+The most common options for the generic document classes are:
 
  * **Main font size**: `10pt, 11pt, 12pt` (default: `10pt`)
  * **Paper size**: `a4paper, letterpaper, a5paper, b5paper, executivepaper, legalpaper` (default: `letterpaper`*)
@@ -126,7 +130,32 @@ The generic document classes that come with LaTeX offer some layout flexibility,
 
 [See more about document classes options here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
 
+#### Packages
+
+> Line 2: \usepackage[utf8]{inputenc} 
+
+While writing your document, you will probably find that there are some areas where basic LaTeX cannot solve your problem. If you want to include graphics, colored text or source code from a file into your document, you need to enhance the capabilities of LaTeX. Such enhancements are called packages (from [here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Packages)). The `usepackage` command tells LaTeX to load packages of environments, commands, and symbols for specific purposes (from [here](https://latex.wikia.org/wiki/Usepackage_(LaTeX_command))).  The general syntax is
+
+```latex
+\usepackage[options]{package}
+```
+
+The most common packages are:
+
+* `inputenc`: input encoding
+* `amsmath`, `amsfonts`: contains a comprehensive set of mathematical symbols; particularly handy for rendering matrices
+* `graphicx`: to include graphics (images)
+* `xcolor`: to use colours in a wide variety of ways, including rgb, cmyk, hsb
+* `fancyhdr`: useful for customizing the headers and footers in your document
+* `hyperref`: to automatically insert hyperlinks into the document
+
 #### Standard titles
+
+> Line 4: \title{ }
+
+> Line 5: \author{ }
+
+> Line 6: \date{October 2021}
 
 The standard classes provide four storing commands that are used to automatically create the title. The storing commands are
 
@@ -134,3 +163,6 @@ The standard classes provide four storing commands that are used to automaticall
 * **\author**
 * **\thanks**: footnote
 * **\date**
+
+### Text
+
