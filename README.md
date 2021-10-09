@@ -81,11 +81,11 @@ This screen is divided in three columns, from left to right:
 
 Note that you can resize, minimize and maximize columns.
 
-### Text source
+## General LaTeX syntax
 
 The `Overleaf` automatically adds some elements to your code, even if you start with a blank project. So let's understand these elements.
 
-#### Preamble
+### Preamble
 
 Everything from line 1 up to line 7 is part of the `Preamble`.
 
@@ -106,7 +106,7 @@ The general syntax of a LaTeX document is
 
 > Line 1: `\documentclass{article}`
 
-*When processing an input file, LaTeX needs to know which layout standard to use. Here, the class parameter for the command `\documentclass` specifies the layout to use for the document. It is recommended to put this declaration at the very beginning. Some standard classes are:*
+The `documentclass` is the first command of a LaTeX document, and identifies the type of document contained in the input file (from [here](https://latex.wikia.org/wiki/List_of_LaTeX_commands#documentclass_command)). Some standard classes are:
 
 * **article**: For articles in scientific journals, presentations, short reports, program documentation, invitations, ...
 * **report**: For longer reports containing several chapters, small books, thesis, ...
@@ -114,4 +114,15 @@ The general syntax of a LaTeX document is
 * **letter**: For writing letters.
 * **beamer**: For writing presentations (see LaTeX/Presentations).
 
-[See more about Document classes here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
+[See more about document classes here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
+
+##### Document Class Options
+
+The generic document classes that come with LaTeX offer some layout flexibility, which is why they have a lot of options in common. The most common options for the generic document classes are:
+
+ * **Main font size**: `10pt, 11pt, 12pt` (default: `10pt`)
+ * **Paper size**: `a4paper, letterpaper, a5paper, b5paper, executivepaper, legalpaper` (default: `letterpaper`*)
+ * **Number of columns**: `onecolumn, twocolumn` (default: `onecolumn`)
+
+[See more about document classes options here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
+
