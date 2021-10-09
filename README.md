@@ -28,7 +28,7 @@
 
 [Definition from here](https://www.latex-project.org/)
 
-## LaTeX Features
+## LaTeX features
 
 * Typesetting journal articles, technical reports, books, and slide presentations.
 * Control over large documents containing sectioning, cross-references, tables and figures.
@@ -41,3 +41,6 @@
 
 [Definition from here](https://www.latex-project.org/)
 
+## Learning curve
+
+![learning](inputs/figures/fig1.png)
