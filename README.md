@@ -65,8 +65,53 @@
 
 ### First project
 
-After creating an account, a page with the option `Create First Project` will appear (see image bellow). 
+After creating an account, a page with the option `Create First Project` will appear (see image bellow). To create your first `Project` just click on the button, chose one template (here, the `Blank Project`) and give a name for your project.
 
 ![first project](inputs/figures/fig3.png)
 
-To create your first `Project` just click on the button, chose one template (here, the `Blank Project`) and give a name for your project.
+The next screen is the `Projec` page, see bellow:
+
+![project screen](inputs/figures/fig4.png)
+
+This screen is divided in three columns, from left to right:
+
+1. Files
+2. Text source
+3. Output
+
+Note that you can resize, minimize and maximize columns.
+
+### Text source
+
+The `Overleaf` automatically adds some elements to your code, even if you start with a blank project. So let's understand these elements.
+
+#### Preamble
+
+Everything from line 1 up to line 7 is part of the `Preamble`.
+
+*The [`preamble`](https://latex.wikia.org/wiki/LaTeX_preamble) is the first section of an input file, before the text of the document itself, in which you tell LaTeX the type of document, and other information LaTeX will need to format the document correctly.*
+
+The general syntax of a LaTeX document is
+
+```latex
+\documentclass{class}
+   … your preamble goes here …
+
+\begin{document}
+   … your text goes here …
+\end{document}
+```
+
+#### Document classes
+
+> Line 1: `\documentclass{article}`
+
+*When processing an input file, LaTeX needs to know which layout standard to use. Here, the class parameter for the command `\documentclass` specifies the layout to use for the document. It is recommended to put this declaration at the very beginning. Some standard classes are:*
+
+* **article**: For articles in scientific journals, presentations, short reports, program documentation, invitations, ...
+* **report**: For longer reports containing several chapters, small books, thesis, ...
+* **book**: For books.
+* **letter**: For writing letters.
+* **beamer**: For writing presentations (see LaTeX/Presentations).
+
+[See more about Document classes here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
