@@ -211,3 +211,77 @@ All auto-numbered headings get entered in the Table of Contents (also for list a
 * `\listoftables`
 * `\tableofcontents`
 
+#### Lists
+
+Typesetting lists is a large topic because LaTeX lists are extremely configurable, enabling creation of an enormous variety of list types and structures (from [here](https://pt.overleaf.com/learn/latex/Lists)). Bellow some standards lists are presented. If you want configure and customize your lists see more [here](https://pt.overleaf.com/learn/latex/Lists).
+
+##### Unordered lists
+
+```latex
+\begin{itemize}
+    \item ... some text ...
+    \item ... some text ...
+    \item ... some text ...
+\end{itemize}
+```
+
+##### Description lists
+
+```latex
+\begin{description}
+    \item [some description] ... some text ...
+    \item [some description] ... some text ...
+    \item ... some text ...
+\end{description}
+```
+
+Note that the `[description]` is optional.
+
+##### Ordered lists
+
+```latex
+\begin{enumerate}
+    \item ... some text ...
+    \item ... some text ...
+    \item ... some text ...
+\end{enumerate}
+```
+
+#### Figure
+
+To include images in your text you need include a package in the `preamble`. I recommend using the package `graphicx`.
+
+```latex
+\usepackage{graphicx}
+```
+
+The image is inserted using the command `\includegraphics`. The ideal is to use the `figure` environment to to properly include the image in the text. The complete command is
+
+```latex
+\begin{figure}[position option]
+    \centering
+    \includegraphics[figure options]{file path}
+    \caption{Caption.}
+    \label{fig:my_label}
+\end{figure}
+```
+
+Some figures options are (from [here](https://pt.overleaf.com/learn/latex/Inserting_Images#Changing_the_image_size_and_rotating_the_picture)):
+
+* **scale**
+* **width** 
+* **height**
+* **angle** 
+
+Figures are [floats](https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions) (containers for things in a document that cannot be broken over a page) and the LaTeX will  automatically define the best location for the image. However, if we don't give some "tips" on how to do this, the end result can be very different from what you expect. Fortunately, we can add some options to help LaTeX define the best position for the image.
+
+Some position options are (from [here](https://pt.overleaf.com/learn/latex/Inserting_Images#Positioning)):
+
+* **h**: Place the float here, i.e., approximately at the same point it occurs in the source text (however, notexactly at the spot)
+* **t**: Position at the top of the page.
+* **b**: Position at the bottom of the page.
+* **p**: Put on a special page for floats only.
+* **!**: Override internal parameters LaTeX uses for determining "good" float positions.
+* **H**: Places the float at precisely the location in the LATEX code. Requires the float package, though may cause problems occasionally. This is somewhat equivalent to h!.
+
+#### Tables 
