@@ -22,11 +22,45 @@
   * Research Fellow, School of Geography, University of Leeds, UK
   * [More information](https://patricia-ternes.github.io/)
 
+## Table of Contents
+
+- [Author](#author)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+  - [What is LaTeX](#what-is-latex)
+  - [LaTeX features](#latex-features)
+  - [Learning curve](#learning-curve)
+  - [What I can do with LaTeX?](#what-i-can-do-with-latex)
+- [Overleaf](#overleaf)
+  - [First project](#first-project)
+- [General LaTeX syntax](#general-latex-syntax)
+  - [Preamble](#preamble)
+    - [Document classes](#document-classes)
+    - [Packages](#packages)
+    - [Standard titles](#standard-titles)
+  - [Text](#text)
+  - [Sectioning commands](#sectioning-commands)
+  - [Table of contents](#table-of-contents-1)
+  - [Lists](#lists)
+    - [Unordered lists](#unordered-lists)
+    - [Description lists](#description-lists)
+    - [Ordered lists](#ordered-lists)
+  - [Figures](#figures)
+  - [Tables](#tables)
+  - [Mathematical environment](#mathematical-environment)
+    - [Math modes](#math-modes)
+      - [Inline math mode](#inline-math-mode)
+      - [Unordered math mode](#unordered-math-mode)
+      - [Ordered math mode](#ordered-math-mode)
+      - [Array environment](#array-environment)
+    - [Some functions](#some-functions)
+    - [LaTeX mathematical symbols](#latex-mathematical-symbols)
+
 ## Introduction
 
 ### What is LaTeX
 
-*"LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or «Bertolt Brecht»), is a document preparation system for high-quality typesetting."* 
+*LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or «Bertolt Brecht»), is a document preparation system for high-quality typesetting.* 
 
 [Definition from here](https://www.latex-project.org/)
 
@@ -176,7 +210,7 @@ The title is created inside the text area through the command `maketitle`
 \end{document}
 ```
 
-#### Sectioning commands
+### Sectioning commands
 
 The commands for inserting sections are fairly intuitive. Of course, certain commands are appropriate to different document classes. For example, a book has chapters but an article doesn't (from [here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands)). Some examples:
 
@@ -203,7 +237,7 @@ The `\appendix` macro can be used to indicate that following sections or chapter
     ... some text ...
 ```
 
-#### Table of contents
+### Table of contents
 
 All auto-numbered headings get entered in the Table of Contents (also for list and figures) automatically. If you want to display the tables of content, just add the command.
 
@@ -211,11 +245,11 @@ All auto-numbered headings get entered in the Table of Contents (also for list a
 * `\listoftables`
 * `\tableofcontents`
 
-#### Lists
+### Lists
 
 Typesetting lists is a large topic because LaTeX lists are extremely configurable, enabling creation of an enormous variety of list types and structures (from [here](https://pt.overleaf.com/learn/latex/Lists)). Bellow some standards lists are presented. If you want configure and customize your lists see more [here](https://pt.overleaf.com/learn/latex/Lists).
 
-##### Unordered lists
+#### Unordered lists
 
 ```latex
 \begin{itemize}
@@ -225,7 +259,7 @@ Typesetting lists is a large topic because LaTeX lists are extremely configurabl
 \end{itemize}
 ```
 
-##### Description lists
+#### Description lists
 
 ```latex
 \begin{description}
@@ -237,7 +271,7 @@ Typesetting lists is a large topic because LaTeX lists are extremely configurabl
 
 Note that the `[description]` is optional.
 
-##### Ordered lists
+#### Ordered lists
 
 ```latex
 \begin{enumerate}
@@ -247,7 +281,7 @@ Note that the `[description]` is optional.
 \end{enumerate}
 ```
 
-#### Figures
+### Figures
 
 To include images in your text you need include a package in the `preamble`. I recommend using the package `graphicx`.
 
@@ -293,7 +327,7 @@ Some position options are (from [here](https://pt.overleaf.com/learn/latex/Inser
 * `!`: Override internal parameters LaTeX uses for determining "good" float positions.
 * `H`: Places the float at precisely the location in the LaTeX code. Requires the float package, though may cause problems occasionally. This is somewhat equivalent to h!.
 
-#### Tables
+### Tables
 
 The `tabular` environment is the default LaTeX method to create tables. As for including figures, the ideal is to use the `table` environment to to properly include the table in the text. The complete command is
 
@@ -318,4 +352,87 @@ The number of columns and the alignment is defined as a parameter just after the
 To create a new line just add the `\\` command to the end of the previous line and write a new line. To drawn a horizontal line, use the `\hline` command after the `\\`.
 
 In addition, there are additional packages and advanced commands that allow greater control over the table layout. See [here](https://pt.overleaf.com/learn/latex/Tables) for more information on tables.
+
+### Mathematical environment
+
+If your document requires only a few simple mathematical formulas, plain LaTeX has most of the tools that you will ever need. If you are writing a scientific document that contains numerous complex formulas some additional packages are required from [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics)). Recommended packages are:
+
+* amsmath or mathtools
+* amsfonts
+
+For a complete description about the mathematical environment you can find [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics). Bellow I will summarize some basic concepts.
+
+#### Math modes
+
+##### Inline math mode
+
+To type some equation in inline mode, you can use the `$ ... $` delimiters.
+
+```latex
+... some text ... $ some equation $ ... some text ...
+```
+
+##### Unordered math mode
+
+To type some equation in the unordered math mode, you can use the `\[ ... \]` delimiters.
+
+```latex
+... some text ... 
+\[
+    some equation
+\]
+... some text ...
+```
+
+##### Ordered math mode
+
+To type some equation in the ordered math mode, you can use the `\begin{equation} ... \end{equation}` delimiters.
+
+```latex
+... some text ... 
+\begin{equation}
+    some equation
+\end{equation}
+... some text ...
+```
+
+##### Array environment
+
+To type some equation in the array math mode (like a matrix), you can use the `\begin{array} ... \end{array}` .delimiters.
+
+```latex
+\begin{equation}
+    \begin{array}{cols} 
+        row1 \\ 
+        row2 \\ 
+        . . .\\
+        rowm 
+    \end{array}
+\end{equation}
+```
+
+Note that the array should be used inside a math mode!
+
+#### Some functions
+
+* `\frac{numerator}{denominator}`: fraction
+* `\sqrt{\frac{a}{b}}`: square roots
+* `\sqrt[n]{\frac{a}{b}}`: roots of magnitude `n`
+* `^{n}`: powers
+* `_{n}`: indices
+
+#### LaTeX mathematical symbols
+
+Mathematics has a huge variety of symbols, and they are all available in LaTeX. Bellow some ideas about what is available:
+
+* Greek and Hebrew letters
+* math constructs
+* Delimiters
+* Variable-sized symbols
+* Standard Function Names
+* Binary Operation and Relation Symbols
+* Arrow symbols
+* Math mode accents
+
+You can see this [file](https://www.caam.rice.edu/~heinken/latex/symbols.pdf) to find the commands for each symbol.
 
