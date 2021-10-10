@@ -41,7 +41,7 @@
 * Inclusion of artwork, and process or spot colour.
 * Using PostScript or Metafont fonts.
 
-[Definition from here](https://www.latex-project.org/)
+[Features from here](https://www.latex-project.org/)
 
 ### Learning curve
 
