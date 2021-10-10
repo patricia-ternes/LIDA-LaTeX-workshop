@@ -55,6 +55,8 @@
       - [Array environment](#array-environment)
     - [Some functions](#some-functions)
     - [LaTeX mathematical symbols](#latex-mathematical-symbols)
+  - [Bibliography with BibTeX](#bibliography-with-bibtex)
+    - [The BibTeX file](#the-bibtex-file)
 
 ## Introduction
 
@@ -436,3 +438,87 @@ Mathematics has a huge variety of symbols, and they are all available in LaTeX. 
 
 You can see this [file](https://www.caam.rice.edu/~heinken/latex/symbols.pdf) to find the commands for each symbol.
 
+### Bibliography with BibTeX
+
+To including bibliography using a `bibtex` file is necessary:
+
+1. Create a bibtex file (extension .bib) with the citations.
+2. Include `\bibliographystyle{unsrt}` on preamble to define the numbered style.
+3. Use the `\cite{bib_key}` command to cite the reference.
+4. Insert the `\bibliography{bib_file}` command to print the bibliography.
+
+The syntax is:
+
+```latex
+%in the preamble
+%--------------------------------
+    \bibliographystyle{unsrt}
+%--------------------------------
+
+% in the text
+    ... some text \cite{bib_key} some text ...
+
+%Where the bibliography will be printed
+    \bibliography{bib_file}
+```
+
+The standard LaTeX bibliography supports numerical citation. If you need different styles, you can use a different bibliography package that includes different styles. A good example is the `natbib` package, with a syntax like:
+
+```latex
+%in the preamble
+%--------------------------------
+   \usepackage{natbib}
+   \bibliographystyle{stylename}
+%--------------------------------
+
+% in the text
+    ... some text \cite{bib_key} some text ...
+
+%Where the bibliography will be printed
+    \bibliography{bib_file}
+```
+
+and some styles options:
+
+* dinat
+* plainnat
+* abbrvnat
+* ksfh_nat
+
+See [here](https://pt.overleaf.com/learn/latex/Natbib_bibliography_styles) for more about the `natbib` package.
+
+#### The BibTeX file
+
+Some standard templates for organize the references are:
+
+```latex
+@article{bib_key,
+    author    = " author 1 and author 2 and author 3",
+    title     = "",
+    journal   = "",
+    volume    = "",  % Optional
+    number    = "",  % Optional
+    pages     = "",  % Optional
+    year      = "XXXX",
+    month     = "",  % Optional
+    note      = "",  % Optional
+}
+```
+
+```latex
+@book{bib_key,
+    author    = "",
+    title     = "",
+    publisher = "",
+    volume    = "",   % Optional
+    number    = "",   % Optional
+    series    = "",   % Optional
+    address   = "",   % Optional
+    edition   = "",   % Optional
+    year      = "XXXX",
+    month     = "",   % Optional
+    note      = "",   % Optional
+}
+```
+
+You can see more templates [here](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors).
