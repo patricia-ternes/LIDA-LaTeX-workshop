@@ -33,30 +33,31 @@
   - [What I can do with LaTeX?](#what-i-can-do-with-latex)
 - [Overleaf](#overleaf)
   - [First project](#first-project)
-- [General LaTeX syntax](#general-latex-syntax)
-  - [Preamble](#preamble)
-    - [Document classes](#document-classes)
-    - [Packages](#packages)
-    - [Standard titles](#standard-titles)
-  - [Text](#text)
-  - [Sectioning commands](#sectioning-commands)
-  - [Table of contents](#table-of-contents-1)
-  - [Lists](#lists)
-    - [Unordered lists](#unordered-lists)
-    - [Description lists](#description-lists)
-    - [Ordered lists](#ordered-lists)
-  - [Figures](#figures)
-  - [Tables](#tables)
-  - [Mathematical environment](#mathematical-environment)
-    - [Math modes](#math-modes)
-      - [Inline math mode](#inline-math-mode)
-      - [Unordered math mode](#unordered-math-mode)
-      - [Ordered math mode](#ordered-math-mode)
-      - [Array environment](#array-environment)
-    - [Some functions](#some-functions)
-    - [LaTeX mathematical symbols](#latex-mathematical-symbols)
-  - [Bibliography with BibTeX](#bibliography-with-bibtex)
-    - [The BibTeX file](#the-bibtex-file)
+- [Preamble](#preamble)
+  - [Document classes](#document-classes)
+  - [Packages](#packages)
+  - [Standard titles](#standard-titles)
+- [Text](#text)
+- [Sectioning commands](#sectioning-commands)
+- [Table of contents](#table-of-contents-1)
+- [Lists](#lists)
+  - [Unordered lists](#unordered-lists)
+  - [Description lists](#description-lists)
+  - [Ordered lists](#ordered-lists)
+- [Figures](#figures)
+- [Tables](#tables)
+- [Mathematical environment](#mathematical-environment)
+  - [Math modes](#math-modes)
+    - [Inline math mode](#inline-math-mode)
+    - [Unordered math mode](#unordered-math-mode)
+    - [Ordered math mode](#ordered-math-mode)
+    - [Array environment](#array-environment)
+  - [Some functions](#some-functions)
+  - [LaTeX mathematical symbols](#latex-mathematical-symbols)
+- [Bibliography with BibTeX](#bibliography-with-bibtex)
+  - [The BibTeX file](#the-bibtex-file)
+- [Final Tips:](#final-tips)
+  - [Special Characters!](#special-characters)
 
 ## Introduction
 
@@ -117,11 +118,9 @@ This screen is divided in three columns, from left to right:
 
 Note that you can resize, minimize and maximize columns.
 
-## General LaTeX syntax
+## Preamble
 
 The `Overleaf` automatically adds some elements to your code, even if you start with a blank project. So let's understand these elements.
-
-### Preamble
 
 Everything from line 1 up to line 7 is part of the `Preamble`.
 
@@ -138,7 +137,7 @@ The general syntax of a LaTeX document is
 \end{document}
 ```
 
-#### Document classes
+### Document classes
 
 > Line 1: `\documentclass{article}`
 
@@ -166,7 +165,7 @@ The most common options for the generic document classes are:
 
 [See more about document classes options here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
 
-#### Packages
+### Packages
 
 > Line 2: `\usepackage[utf8]{inputenc}` 
 
@@ -185,7 +184,7 @@ The most common packages are:
 * `fancyhdr`: useful for customizing the headers and footers in your document
 * `hyperref`: to automatically insert hyperlinks into the document
 
-#### Standard titles
+### Standard titles
 
 > Line 4: `\title{ }`
 
@@ -204,7 +203,7 @@ The standard classes provide four storing commands that are used to automaticall
 
 The title is created inside the text area through the command `maketitle`
 
-### Text
+## Text
 
 ```latex
 \begin{document}
@@ -212,7 +211,7 @@ The title is created inside the text area through the command `maketitle`
 \end{document}
 ```
 
-### Sectioning commands
+## Sectioning commands
 
 The commands for inserting sections are fairly intuitive. Of course, certain commands are appropriate to different document classes. For example, a book has chapters but an article doesn't (from [here](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands)). Some examples:
 
@@ -239,7 +238,7 @@ The `\appendix` macro can be used to indicate that following sections or chapter
     ... some text ...
 ```
 
-### Table of contents
+## Table of contents
 
 All auto-numbered headings get entered in the Table of Contents (also for list and figures) automatically. If you want to display the tables of content, just add the command.
 
@@ -247,11 +246,11 @@ All auto-numbered headings get entered in the Table of Contents (also for list a
 * `\listoftables`
 * `\tableofcontents`
 
-### Lists
+## Lists
 
 Typesetting lists is a large topic because LaTeX lists are extremely configurable, enabling creation of an enormous variety of list types and structures (from [here](https://pt.overleaf.com/learn/latex/Lists)). Bellow some standards lists are presented. If you want configure and customize your lists see more [here](https://pt.overleaf.com/learn/latex/Lists).
 
-#### Unordered lists
+### Unordered lists
 
 ```latex
 \begin{itemize}
@@ -261,7 +260,7 @@ Typesetting lists is a large topic because LaTeX lists are extremely configurabl
 \end{itemize}
 ```
 
-#### Description lists
+### Description lists
 
 ```latex
 \begin{description}
@@ -273,7 +272,7 @@ Typesetting lists is a large topic because LaTeX lists are extremely configurabl
 
 Note that the `[description]` is optional.
 
-#### Ordered lists
+### Ordered lists
 
 ```latex
 \begin{enumerate}
@@ -283,7 +282,7 @@ Note that the `[description]` is optional.
 \end{enumerate}
 ```
 
-### Figures
+## Figures
 
 To include images in your text you need include a package in the `preamble`. I recommend using the package `graphicx`.
 
@@ -329,7 +328,7 @@ Some position options are (from [here](https://pt.overleaf.com/learn/latex/Inser
 * `!`: Override internal parameters LaTeX uses for determining "good" float positions.
 * `H`: Places the float at precisely the location in the LaTeX code. Requires the float package, though may cause problems occasionally. This is somewhat equivalent to h!.
 
-### Tables
+## Tables
 
 The `tabular` environment is the default LaTeX method to create tables. As for including figures, the ideal is to use the `table` environment to to properly include the table in the text. The complete command is
 
@@ -355,7 +354,7 @@ To create a new line just add the `\\` command to the end of the previous line a
 
 In addition, there are additional packages and advanced commands that allow greater control over the table layout. See [here](https://pt.overleaf.com/learn/latex/Tables) for more information on tables.
 
-### Mathematical environment
+## Mathematical environment
 
 If your document requires only a few simple mathematical formulas, plain LaTeX has most of the tools that you will ever need. If you are writing a scientific document that contains numerous complex formulas some additional packages are required from [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics)). Recommended packages are:
 
@@ -364,9 +363,9 @@ If your document requires only a few simple mathematical formulas, plain LaTeX h
 
 For a complete description about the mathematical environment you can find [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics). Bellow I will summarize some basic concepts.
 
-#### Math modes
+### Math modes
 
-##### Inline math mode
+#### Inline math mode
 
 To type some equation in inline mode, you can use the `$ ... $` delimiters.
 
@@ -374,7 +373,7 @@ To type some equation in inline mode, you can use the `$ ... $` delimiters.
 ... some text ... $ some equation $ ... some text ...
 ```
 
-##### Unordered math mode
+#### Unordered math mode
 
 To type some equation in the unordered math mode, you can use the `\[ ... \]` delimiters.
 
@@ -386,7 +385,7 @@ To type some equation in the unordered math mode, you can use the `\[ ... \]` de
 ... some text ...
 ```
 
-##### Ordered math mode
+#### Ordered math mode
 
 To type some equation in the ordered math mode, you can use the `\begin{equation} ... \end{equation}` delimiters.
 
@@ -398,7 +397,7 @@ To type some equation in the ordered math mode, you can use the `\begin{equation
 ... some text ...
 ```
 
-##### Array environment
+#### Array environment
 
 To type some equation in the array math mode (like a matrix), you can use the `\begin{array} ... \end{array}` .delimiters.
 
@@ -415,7 +414,7 @@ To type some equation in the array math mode (like a matrix), you can use the `\
 
 Note that the array should be used inside a math mode!
 
-#### Some functions
+### Some functions
 
 * `\frac{numerator}{denominator}`: fraction
 * `\sqrt{\frac{a}{b}}`: square roots
@@ -423,7 +422,7 @@ Note that the array should be used inside a math mode!
 * `^{n}`: powers
 * `_{n}`: indices
 
-#### LaTeX mathematical symbols
+### LaTeX mathematical symbols
 
 Mathematics has a huge variety of symbols, and they are all available in LaTeX. Bellow some ideas about what is available:
 
@@ -438,7 +437,7 @@ Mathematics has a huge variety of symbols, and they are all available in LaTeX. 
 
 You can see this [file](https://www.caam.rice.edu/~heinken/latex/symbols.pdf) to find the commands for each symbol.
 
-### Bibliography with BibTeX
+## Bibliography with BibTeX
 
 To including bibliography using a `bibtex` file is necessary:
 
@@ -485,14 +484,14 @@ and some styles options:
 * abbrvnat
 * ksfh_nat
 
-See [here](https://pt.overleaf.com/learn/latex/Natbib_bibliography_styles) for more about the `natbib` package.
+See [here](https://pt.overleaf.com/learn/latex/Natbib_bibliography_styles) for more about the `natbib` package, and [here](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management) for a complete explanation about the LaTeX bibliography.
 
-#### The BibTeX file
+### The BibTeX file
 
 Some standard templates for organize the references are:
 
 ```latex
-@article{bib_key,
+@article{bib_key1,
     author    = " author 1 and author 2 and author 3",
     title     = "",
     journal   = "",
@@ -505,8 +504,10 @@ Some standard templates for organize the references are:
 }
 ```
 
+Note that the authors' name are separated by `and`. Furthermore, each BibTeX entry has a unique `bib_key`. The `bib_key` is used as reference to link the citation in the main file with the BibTeX file.
+
 ```latex
-@book{bib_key,
+@book{bib_key2,
     author    = "",
     title     = "",
     publisher = "",
@@ -522,3 +523,24 @@ Some standard templates for organize the references are:
 ```
 
 You can see more templates [here](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors).
+
+## Final Tips:
+
+### Special Characters!
+
+As you may already notice, some characters are not interpreted as a text entrance, they are interpreted as commands. Some common special characters are:
+
+
+| LaTeX command | Description | Text-mode equivalence |
+| ------------- | ----------- | --------------------- |
+| `$`             | Delimiter for math mode    | `\$` |
+| `%`             | To comment some text       | `\%` |
+| `^`             | Superscript (math)         | `\^` |
+| `_`             | Subscript (math)           | `\_` |
+| `&`             | Table column divisor       | `\&` |
+| `{` and `}`     | Used with several commands | `\{` and `\}` |
+| `~`             | Single space               | `\~` |
+| `\`             | Used with commands         | `\textbackslash` |
+
+See [here](https://en.wikibooks.org/wiki/LaTeX/Special_Characters) to know more about special characters.
+
