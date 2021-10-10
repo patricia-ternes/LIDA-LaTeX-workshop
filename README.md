@@ -58,6 +58,12 @@
   - [The BibTeX file](#the-bibtex-file)
 - [Final Tips:](#final-tips)
   - [Special Characters!](#special-characters)
+  - [Spaces](#spaces)
+    - [New Paragraph](#new-paragraph)
+    - [Line break](#line-break)
+    - [Page break](#page-break)
+    - [Horizontal blank spaces](#horizontal-blank-spaces)
+    - [Vertical blank spaces](#vertical-blank-spaces)
 
 ## Introduction
 
@@ -544,3 +550,44 @@ As you may already notice, some characters are not interpreted as a text entranc
 
 See [here](https://en.wikibooks.org/wiki/LaTeX/Special_Characters) to know more about special characters.
 
+### Spaces
+
+The LaTeX have a huge control about the spaces in the output, but some information can be helpfull.
+
+#### New Paragraph
+
+The easeast way to create a new paragraph is by leaving an empty line in the code (see [here](https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces)). The syntax is
+
+```latex
+First paragraph ...
+
+Second paragraph ...
+this line is part of the second paragraph.
+```
+
+#### Line break
+
+There are three commands to force a new line:
+
+* `\\`
+* `\newline`
+* `\hfill \break`
+
+#### Page break
+
+* \clearpage
+* \newpage
+
+The difference between them is the way that they handle with floats (like images and tables).
+
+#### Horizontal blank spaces
+
+* `~`: single space
+* `\quad` and `\qquad`: spaces in math mode (`\qquad` = 2*`\quad`)
+* `\hspace{1cm}`: add a horizontal space of the desired size.
+* `\hfill`: add the maximum possible horizontal space.
+
+#### Vertical blank spaces
+
+* `\vspace{1cm}`: add a vertical space of the desired size.
+* `\vfill`: add the maximum possible vertical space.
