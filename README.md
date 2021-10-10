@@ -316,3 +316,6 @@ The number of columns and the alignment is defined as a parameter just after the
 * `r`: right
 
 To create a new line just add the `\\` command to the end of the previous line and write a new line. To drawn a horizontal line, use the `\hline` command after the `\\`.
+
+In addition, there are additional packages and advanced commands that allow greater control over the table layout. See [here](https://pt.overleaf.com/learn/latex/Tables) for more information on tables.
+
