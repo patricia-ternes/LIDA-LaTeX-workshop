@@ -27,7 +27,7 @@
 The workshop has two additional materials:
 
 * [Presentation](https://patricia-ternes.github.io/Documents/Teaching/Trainings/03-LIDA_LaTeX/presentation_intro_latex.html)
-* TeX file
+* [TeX project](inputs/tex_project/)
 
 ## Table of Contents
 
