@@ -22,10 +22,15 @@
   * Research Fellow, School of Geography, University of Leeds, UK
   * [More information](https://patricia-ternes.github.io/)
 
+## Additional Materials
+
+The workshop has two additional materials:
+
+* [Presentation](https://patricia-ternes.github.io/Documents/Teaching/Trainings/03-LIDA_LaTeX/presentation_intro_latex.html)
+* TeX file
+
 ## Table of Contents
 
-- [Author](#author)
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
   - [What is LaTeX](#what-is-latex)
   - [LaTeX features](#latex-features)
